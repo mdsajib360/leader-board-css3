@@ -120,8 +120,34 @@ courses styles
 Media Queries 
 -------------*/
 @media only screen and (max-width:688px) {
-      .players{
-          background-color: red;
+      .container{
+          width: 100%;
+      }
+      .players,.blogs, .courses{
+          
           grid-template-columns: repeat(1, 1fr);
       }
+      .player,.blog,.course{
+          flex-direction: column;
+      }
+      courses{
+          display: none;
+      }
+}
+
+/* tablet devices  */
+
+@media only screen and (min-width:689px) and (max-width:992px) {
+         .container{
+             width: 100%;
+         } 
+         .blogs{
+             grid-template-columns: repeat(1, 1fr);
+         }
+           .players, .courses{
+               grid-template-columns: repeat(2, 1fr);
+           }
+           .player,.blog,.course{
+            flex-direction: column;
+        }
 }
